@@ -39,11 +39,8 @@ class Arret(Lignes):
               return self.numLigne
             
              
-    def getHoraireAller(self, ligne:Lignes):
-        nom = ligne.getArret()
-        for name in nom:
-            if self.getNom() == name:
-                self.horaires = data.regular_date_go[name]
+    def getHoraireAller(self):
+        self.horaires = data.regular_date_go[self]
         return self.horaires
             
     def getHoraireRetour(self, ligne:Lignes):
@@ -54,20 +51,7 @@ class Arret(Lignes):
         return self.horaires
             
    
-    def Horraire_Seconde(self, lig:Lignes):
-        ListeH = []
-        horraire = self.getHoraireAller(lig)   
-        for i in range(len(horraire)):
-            h_splited = horraire[i].split(":")
-            heures = int(h_splited[0])*60 
-#            print("heures", heures)
-            minutes = int(h_splited[1])
-#            print("minutes", minutes)
-            temps = heures + minutes
-#            print("temps", temps)
-            ListeH.append(temps)
-        return ListeH
-     
+
         
         
         
@@ -79,3 +63,4 @@ class Arret(Lignes):
 ##heures= a_splited[0]
 ##miniutes = a_splited[1]
 #print(a)
+#print(Horraire_Seconde("10:52"))

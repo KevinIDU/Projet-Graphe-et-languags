@@ -39,14 +39,15 @@ class noeud():
     
     def __init__ (self, nom, predecesseur=[], sucesseur=[], ligne=[]):
         self.nom = nom
-        self.ligne = ligne
         
+        
+    def setPredecesseur(self, pred):
+        self.predecesseur.append(pred)    
 
     def setSucesseur(self, succ):
-         self.sucesseur = succ
-    
-    def setPredecesseur(self, pred):
-         self.predecesseur = pred
+        self.sucesseur.append(succ)
+
+
     
     def getNom(self):
         return self.nom
@@ -58,11 +59,16 @@ class noeud():
         return self.nom
     
     def getSucesseur(self):
-        return self.sucesseur.getNom()
+        liste = []
+        for suc in self.sucesseur :
+            liste = liste + suc.getNom()
+        return liste
     
     def getPredecesseur(self):
-        return self.predecesseur.getNom()
-    
+        liste = []
+        for pred in self.predecesseur :
+            liste = liste + pred.getNom()
+        return liste
 
 #node=noeud('Vernord')    
 #node1=noeud('GARE')
@@ -70,9 +76,9 @@ class noeud():
 #
 #node1.setPredecesseur(node)
 #node1.setSucesseur(node2)
-
-
-    
+#
+#print(node1.getPredecesseur())
+#    
     
     
     
