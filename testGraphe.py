@@ -87,7 +87,7 @@ def conversionHorairesgo():
         print("\n")
         
 #trouve le prochain bus qui passe a un arret donné
-def TrouveHorraire(heure, ligne, depart, direction, we):
+def ProchainBus(heure, ligne, depart, direction, we):
     if ligne == "1" and direction == "LYCEE_DE_POISY + POISY_COLLEGE" and we=="n" :
         path = data.regular_date_back
     elif ligne == "1" and direction == "LYCEE_DE_POISY + POISY_COLLEGE" and we=="o" :
@@ -147,7 +147,7 @@ while True:
     arrive = input("A quel arrêt vous voulez allez ? \n ")
     direction = input("quelle est votre direction ? \n ")
     we = input("weekend ? o/n")
-    print("votre prochain bus est à : ", TrouveHorraire(heure, ligne, depart, direction, we))
+    print("votre prochain bus est à : ", ProchainBus(heure, ligne, depart, direction, we))
     print("le chemin le plus court est : ", nx.shortest_path(G, depart, arrive))
     break
     
