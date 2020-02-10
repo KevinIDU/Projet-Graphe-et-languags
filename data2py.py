@@ -45,7 +45,7 @@ we_holidays_date_go2 = dates2dic(slited_content[4])
 we_holidays_date_back2 = dates2dic(slited_content[5])
 
 regular_date_go = [regular_date_go1, regular_date_go2]
-
+regular_date_back=[regular_date_back1, regular_date_back2]
 
 
 
