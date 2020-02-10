@@ -8,8 +8,8 @@ import networkx as nx
 import data2py as data
 
 """
-LYCEE_DE_POISY                          PISCINE-PATINOIRE
-POISY_COLLÈGE                           Arcadium 
+                                        PISCINE-PATINOIRE
+LYCEE_DE_POISY + POISY_COLLEGE          Arcadium 
 Vernod                                  Parc_des_Sports 
 Meythet_Le_Rabelais                     Place_des_Romains     
 Chorus                                  Courier 
